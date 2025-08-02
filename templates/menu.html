@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O So Yummy – Menu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <header>
+    <h1>Menu</h1>
+    <p>Find the Cake that Speaks Your Story</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+      <li><a class="active" href="{{ url_for('menu') }}">Menu</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="menu-category">
+      <h2>🎂 Signature Calendar Cakes</h2>
+      <ul>
+        <li>July 2023 – R280<br><small>Celebrates new beginnings with fresh floral accents</small></li>
+        <li>July 2025 – R340<br><small>A tribute to growth and grace, featuring pastel dreams</small></li>
+        <li>July 2026 – R390<br><small>Bold, symbolic, and ready to mark the next horizon</small></li>
+      </ul>
+    </section>
+
+    <section class="menu-category">
+      <h2>✨ Custom Cakes</h2>
+      <ul>
+        <li>Milestone Moments – From R300<br><small>Birthdays, anniversaries, achievements — personalized with love</small></li>
+        <li>Themed Story Cakes – From R350<br><small>Designs inspired by your journey, hobbies, or vision board</small></li>
+      </ul>
+    </section>
+
+    <section class="menu-category">
+      <h2>📦 Add-ons & Extras</h2>
+      <ul>
+        <li>Message Plaque – R30</li>
+        <li>Custom Color Palette – R50</li>
+        <li>Extra Figurines or Toppers – From R60</li>
+      </ul>
+    </section>
+
+    <p><em>Prices may vary depending on size and detail. Let's co-create your dream cake together.</em></p>
+    <a href="{{ url_for('contact') }}" class="btn">📞 Place Your Order</a>
+  </main>
+
+  <footer>
+    Created with love by Pablo | 📍 Gauteng, Vreeniging<br>
+    📞 065 933 0619 • 📧 <a href="mailto:paballonyamate7@gmail.com">paballonyamate7@gmail.com</a>
+  </footer>
+
+</body>
+</html>

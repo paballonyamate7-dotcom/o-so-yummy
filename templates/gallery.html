@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery – O So Yummy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #c14472;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .cake-card {
+      background-color: #ffe4ec;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .cake-card:nth-child(1) { animation-delay: 0.2s; }
+    .cake-card:nth-child(2) { animation-delay: 0.4s; }
+    .cake-card:nth-child(3) { animation-delay: 0.6s; }
+    .cake-card:nth-child(4) { animation-delay: 0.8s; }
+    .cake-card:nth-child(5) { animation-delay: 1s; }
+
+    .cake-card img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #5c2a3a;
+      font-style: italic;
+      text-align: center;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .cake-card {
+        padding: 10px;
+      }
+
+      .caption {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Milestone Cake Gallery</h1>
+
+  <div class="gallery">
+    <div class="cake-card">
+      <img src="{{ url_for('static', filename='images/cake1.png') }}" alt="Cake 1">
+      <p class="caption">July 2023 – The Beginning of the Calendar Tradition</p>
+    </div>
+    <div class="cake-card">
+      <img src="{{ url_for('static', filename='images/cake2.png') }}" alt="Cake 2">
+      <p class="caption">July 2025 – The Business Vision Comes Alive</p>
+    </div>
+    <div class="cake-card">
+      <img src="{{ url_for('static', filename='images/cake3.png') }}" alt="Cake 3">
+      <p class="caption">July 2026 – A Dream Project in Bloom</p>
+    </div>
+    <div class="cake-card">
+      <img src="{{ url_for('static', filename='images/cake4.png') }}" alt="Cake 4">
+      <p class="caption">Symbolic Celebration – Honoring Growth & Grit</p>
+    </div>
+    <div class="cake-card">
+      <img src="{{ url_for('static', filename='images/cake5.png') }}" alt="Cake 5">
+      <p class="caption">Vision Board Cake – A Taste of Tomorrow</p>
+    </div>
+  </div>
+
+  <footer>
+    Each cake is a chapter. Each slice, a story.<br>
+    Baked with love by Pablo – Gauteng, Vreeniging • 📞 0659330619
+  </footer>
+</body>
+</html>
